@@ -48,10 +48,13 @@ class Nfo:
             value = subtree[child_name]['value']
 
             # Set children if value flag
-            if table:
+            if table:                          
                 children = ast.literal_eval(value.format(**raw_data))
             else:
-                children = [value.format(**raw_data)]
+                try:
+                    children = [value.format(**raw_data)]
+                except IndexError:
+                    pass
 
             if 'convert' in attributes.keys():
                 target_type = attributes['convert']

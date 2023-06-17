@@ -12,3 +12,15 @@ episodedetails:
       input_f: '%Y%m%d'
       output_f: '%Y-%m-%d'
       value: '{upload_date}'
+  - genre:      
+        value: '{tags[0]}'
+  - genre:      
+        value: '{tags[1]}'
+  - genre:      
+        value: '{tags[2]}'      
+  - genre:      
+        value: '{tags[3]}'      
+  - genre:      
+        value: '{tags[4]}'
+  - genre:      
+        value: '{tags[5]}'      
